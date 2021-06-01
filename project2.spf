@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>Project 2 - io</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-6570244522193257619</string>
+			<key>name</key>
+			<string>iO Academy Docker</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>latin1</string>
+			<key>contentFilterV2</key>
+			<dict>
+				<key>children</key>
+				<array/>
+				<key>filterClass</key>
+				<string>groupNode</string>
+				<key>isConjunction</key>
+				<true/>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0
+			b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRk
+			YXRhgAGtCwwZGhscHSEoLDA0OFUkbnVsbNMNDg8QFBhXTlMua2V5
+			c1pOUy5vYmplY3RzViRjbGFzc6MREhOAAoADgASjFRYXgAWABoAI
+			gAxUdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rpb25EZXRhaWxUeXBl
+			UHJpbWFyeUtleWVkRGV0YWlsc9MNDg8eHyCgoIAH0iIjJCVaJGNs
+			YXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJsZURpY3Rpb25hcnmj
+			JCYnXE5TRGljdGlvbmFyeVhOU09iamVjdNIODykroSqACYAL0g8t
+			Li9ZTlMuc3RyaW5ngApSaWTSIiMxMl8QD05TTXV0YWJsZVN0cmlu
+			Z6MxMydYTlNTdHJpbmfSIiM1Nl5OU011dGFibGVBcnJheaM1NydX
+			TlNBcnJhedIiIyY5oiYnAAgAEQAaACQAKQAyADcASQBMAFEAUwBh
+			AGcAbgB2AIEAiACMAI4AkACSAJYAmACaAJwAngCjAKgArQDWAN0A
+			3gDfAOEA5gDxAPoBEAEUASEBKgEvATEBMwE1AToBRAFGAUkBTgFg
+			AWQBbQFyAYEBhQGNAZIAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1705, 1074}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>SELECT `name` , `painting_title`, `type`, `description` FROM `painting_table` JOIN `artist_table` ON `painting_table`.`artist_name` = `artist_table`.`id`;</string>
+			<key>table</key>
+			<string>artist</string>
+			<key>view</key>
+			<string>SP_VIEW_CONTENT</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>214</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT `name` `surname`, `painting_title`, `type`, `description` FROM `painting_table` JOIN `artist_table` ON `painting_table`.`artist_name` = `artist_table`.`id`</string>
+		<string>SELECT `name`, `painting_title`, `type`, `description` FROM `painting_table` JOIN `artist_table` ON `painting_table`.`artist_name` = `artist_table`.`id`</string>
+		<string>SELECT `artist_name`, `painting_title`, `type`, `description` FROM `painting_table` JOIN `artist_table` ON `painting_table`.`artist_name` = `artist_table`.`id`</string>
+		<string>`</string>
+		<string>SELECT `artist_name`, `painting_title`, `type`, `description` FROM `painting_table` JOIN `artist_table` ON `painting_table.artist_name` = `artist_table.id`</string>
+		<string>SELECT `id`, `artist_name`, `painting_title`, `type`, `description` FROM `painting_table` JOIN `artist_table` ON `painting_table.artist_name` = `artist_table.id`</string>
+		<string>INSERT INTO `player` (`name`, `surname`, `lawn`, `clay`, `hard`, `rain`, `dry`, `snow`, `sunny`) VALUES ('Mickey', 'Spillane', '4', '7', '8', '4', '8', '5', '4')</string>
+		<string>INSERT INTO `player` (`name`, `surname`, `lawn`, `clay`, `hard`, `rain`, `dry`, `snow`, `sunny`) VALUES ('John', 'Do', '1', '2', '3', '9', '9', '9', '9')</string>
+		<string>INSERT INTO `player` (`name`, `surname`, `lawn`, `clay`, `hard`, `rain`, `dry`, `snow`, `sunny`) VALUES ('Will', 'Dardeline', '6', '9', '8', '4', '8', '5', '9')</string>
+		<string>INSERT INTO `player` (`name`, `surname`, `lawn`, `clay`, `hard`, `rain`, `dry`, `snow`, `sunny`) VALUES ('Alex', 'Ferreira', '6', '3', '8', '4', '8', '5', '9')</string>
+		<string>INSERT INTO `player` (`name`, `surname`, `lawn`, `clay`, `hard`, `rain`, `dry`, `snow`, `sunny`) VALUES (‘Alex’, ‘Ferreira’, ‘6’, ‘3’, ‘8’, ‘4’, ‘8’, ‘5’, ‘9’)</string>
+		<string>NSERT INTO `player` (`name`, `surname`, `lawn`, `clay`, `hard`, `rain`, `dry`, `snow`, `sunny`) VALUES (‘Alex’, ‘Ferreira’, ‘6’, ‘3’, ‘8’, ‘4’, ‘8’, ‘5’, ‘9’)</string>
+		<string>SELECT `adults`.`name`, `children`.`name`FROM `adults` JOIN `children` ON `adults`.`child1` = `children`.`id`</string>
+		<string>SELECT `adults`.`name`,`child1` FROM `adults` JOIN `children` ON `adults`.`child1` = `children`.`id`</string>
+		<string>SELECT `name`,`child1` FROM `adults` JOIN `children` ON `adults`.`child1` = `children`.`id`</string>
+		<string>SELECT `name`,`child1` FROM `adults`</string>
+		<string>SELECT `name`,`child1` FROM `adults` left JOIN `children` ON `adults`.`child1` = `children`.`id`</string>
+		<string>SELECT `child1` FROM `adults` JOIN `children` ON `adults`.`child1` = `children`.`id`</string>
+		<string>SELECT `name`, `child1` FROM `adults` JOIN `children` ON `adults`.`child1` = `children`.`id`</string>
+		<string>SELECT `name`, `child1` FROM `adults`</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.34</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
