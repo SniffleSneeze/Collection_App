@@ -17,15 +17,15 @@ function getData(PDO $db):array
     return $result;
 }
 
-function extractDataAndDisplay(array $db):string
+function extractDataAndDisplay(array $data):string
 {
     $text = '<section class="container-box">';
-    foreach ($db as $key) {
-        $title = $key['painting_title'];
-        $name = $key['name'];
-        $type = $key['type'];
-        $description = $key['description'];
-        $image = $key['image'];
+    foreach ($data as $row) {
+        $title = $row['painting_title'];
+        $name = $row['name'];
+        $type = $row['type'];
+        $description = $row['description'];
+        $image = $row['image'];
         $text .= '<div class="sub-box">'
                     . '<img src="img/'. $image . '" alt="'. $image .'">'
                     . '<h2 class="title">' . $title . '</h2>'
