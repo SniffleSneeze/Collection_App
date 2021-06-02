@@ -8,6 +8,7 @@
     background-image: url("../img/index-bg.jpg");
     background-repeat: no-repeat;
 }
+
 .index-title {
     width: 50%;
     text-align: center;
@@ -16,7 +17,6 @@
     text-shadow: 2px 5px rgba(255,0,0,0.7);
     border-bottom: 1px solid rgba(0,0,0,1);
     border-top: 1px solid rgba(0,0,0,1);
-
 }
 
 .navbar {
@@ -101,6 +101,7 @@ a:hover {
     background-image: url("../img/form-bg.png");
     background-repeat: no-repeat;
 }
+
 .index-title {
     width: 50%;
     text-align: center;
