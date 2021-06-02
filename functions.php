@@ -17,9 +17,9 @@ function getData(PDO $db):array
     return $result;
 }
 
-function extractData(array $db):string
+function extractDataAndDisplay(array $db):string
 {
-    $text = "<section class='container-box'>";
+    $text = '<section class="container-box">';
     foreach ($db as $key) {
         $title = $key['painting_title'];
         $name = $key['name'];
@@ -27,7 +27,7 @@ function extractData(array $db):string
         $description = $key['description'];
         $image = $key['image'];
         $text .= '<div class="sub-box">'
-                    . "<img src='img/{$image}' alt='{$image}'>"
+                    . '<img src="img/'. $image . '" alt="'. $image .'">'
                     . '<h2 class="title">' . $title . '</h2>'
                     . '<h4 class="artist">' . "Artist: " . $name . '</h4>'
                     . '<h5 class="type">' . "Type: " .$type . '</h5>'

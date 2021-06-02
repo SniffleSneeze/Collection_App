@@ -19,6 +19,6 @@ $result = getData($db);
         <div class="table-title">
             <h1>Welcome In The Gallery</h1>
         </div>
-        <?php echo extractData($result);?>
+        <?php echo extractDataAndDisplay($result);?>
     </body>
 </html>
