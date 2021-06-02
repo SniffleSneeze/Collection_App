@@ -17,6 +17,10 @@
             <div>
                 <a href="gallery.php" class="">Explore Your Gallery</a>
             </div>
+            <div>
+                <a href="form.php" class="">Add To You Collection</a>
+            </div>
+        </nav>
     <footer class="footer">
         <div>
             <p>

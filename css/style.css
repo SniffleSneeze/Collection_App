@@ -93,3 +93,47 @@ img {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 5px 10px rgba(0, 0, 0, 1);
 }
+
+/*
+.sub-box:active {
+    background-color: rgba(255,255,255,1);
+    box-shadow: 5px 10px rgba(0,0,0,1);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    z-index: 1;
+}*/
+/*-------------------------------------Form page --------------------------------------------*/
+
+.form-body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/form-bg.jpeg");
+    background-repeat: no-repeat;
+}
+
+.form-title {
+    width: 40%;
+    text-align: center;
+    margin: 180px 30px 0 auto;
+    font-size: 3rem;
+    color: rgba(255,255,255,1);
+    text-shadow: 2px 5px rgba(255,0,0,1);
+    border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.5);
+    width: 40%;
+    position: absolute;
+    top: -60px;
+}
+
+.form-box div {
+    margin: 20px;
+}
+

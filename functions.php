@@ -38,3 +38,10 @@ function extractDataAndDisplay(array $data):string
     return $text;
 }
 
+function insertDataIntoDataBase(PDO $db, string $title, string $name, string $type, string $description, string $image = "no image")
+{
+    $query = $db->prepare('INSERT INTO `painting` (`painting_title`, `artist_name` ,`type`, `description`, `image` ) VALUE ('alex', 7, 'bla', 'blibli', 'image' );';
+    'INSERT INTO `artist` (`name`) VALUE ('ferreira' );');
+    $query->execute();
+}
+
