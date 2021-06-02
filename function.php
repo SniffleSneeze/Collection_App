@@ -1,5 +1,4 @@
 <?php
-
 function dbConnect(): PDO
 {
     $db = new PDO('mysql:host=db;dbname=Project 2 - io', 'root', 'password');
@@ -18,25 +17,22 @@ function getData(PDO $db):array
     return $result;
 }
 
-
 function extractData(array $db):string
 {
-    $text = "";
-
+    $text = "<section class='container-box'>";
     foreach ($db as $key) {
         $title = $key['painting_title'];
         $name = $key['name'];
         $type = $key['type'];
         $description = $key['description'];
-        $text .= "<div class='article'>" . "<h2>" . $title . "</h2>" .
-            "<h4>" . "by: " . $name . "</h4>" .
-            "<h5>" . "Type: " . $type . "</h5>" .
-            "<h5>" . "Description: " . "<br>" . $description . "</h5>" . "</div>";
+        $text .= '<div class="sub-box">'
+                    . '<h2 class="title">' . $title . '</h2>'
+                    . '<h4 class="artist">' . "Artist: " . $name . '</h4>'
+                    . '<h5 class="type">' . "Type: " .$type . '</h5>'
+                    . '<p class="descripton">' . "Description: </p>"  . '<p>' . $description . '</p>' .
+                '</div>';
     }
+    $text .= '</section>';
     return $text;
 }
-
-$db = dbConnect();
-$result = getData($db);
-echo extractData($result);
 

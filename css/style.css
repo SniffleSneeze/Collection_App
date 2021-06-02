@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.index-body {
+    background-image: url("../img/index-bg.jpg");
+    background-repeat: no-repeat;
+}
+.index-title {
+    width: 50%;
+    text-align: center;
+    margin: 200px auto 0 auto;
+    font-size: 3rem;
+    text-shadow: 2px 5px rgba(255,0,0,0.7);
+    border-bottom: 1px solid rgba(0,0,0,1)
+}
+
+.navbar {
+    width: 30%;
+    margin: 20px auto;
+    display:flex;
+    justify-content: space-around;
+}
+
+a {
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(0,0,0,1);
+    background-color: rgba(255,0,0,1);
+    box-shadow: 1px 5px rgba(0,0,0,0.5);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    box-shadow: 5px 10px rgba(0,0,0,1);
+    font-weight: bold;
+}
+
+.footer {
+    margin: 30% auto;
+}
+/*-------------------------------------Table page --------------------------------------------*/
+.table-body {
+    background-image: url("../img/table-bg.jpg");
+    background-repeat: no-repeat;
+}
+
+.table-title {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: rgba(255,255,255);
+}
+
+.container-box {
+    margin: 5% auto;
+    width: 90%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.sub-box {
+    padding: 5px;
+    background-color: rgba(255,255,255,0.3);
+    margin: 10px;
+}
