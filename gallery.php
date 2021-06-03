@@ -1,7 +1,7 @@
 <?php
 require "functions.php";
 $db = dbConnect();
-$result = getData($db);
+$data = getData($db);
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +19,21 @@ $result = getData($db);
         <div class="table-title">
             <h1>Welcome In The Gallery</h1>
         </div>
-        <?php echo extractDataAndDisplay($result);?>
+        <nav class="navbar">
+            <div>
+                <a href="index.php">Back To Front Door</a>
+            </div>
+            <div>
+                <a href="form.php">Add To You Collection</a>
+            </div>
+        </nav>
+        <?php echo extractDataAndDisplay($data);?>
+        <footer>
+            <div>
+                <p>
+                    &copy - Alexander Ferreira - project 2 - from I0 Academy - 2021
+                </p>
+            </div>
+        </footer>
     </body>
 </html>

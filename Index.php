@@ -17,10 +17,14 @@
             <div>
                 <a href="gallery.php" class="">Explore Your Gallery</a>
             </div>
-    <footer class="footer">
+            <div>
+                <a href="form.php" class="">Add To You Collection</a>
+            </div>
+        </nav>
+    <footer>
         <div>
             <p>
-                &copy - Alexander Ferreira 2021
+                &copy - Alexander Ferreira - project 2 - from I0 Academy - 2021
             </p>
         </div>
     </footer>

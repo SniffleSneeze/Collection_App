@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
-    position: relative;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
 }
 
 .index-body {
-    width: 100vw;
-    height: 100vh;
     background-image: url("../img/index-bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .index-title {
@@ -17,8 +20,8 @@
     margin: 200px auto 0 auto;
     font-size: 3rem;
     text-shadow: 2px 5px rgba(255,0,0,0.7);
-    border-bottom: 1px solid rgba(0,0,0,1);
-    border-top: 1px solid rgba(0,0,0,1);
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
 }
 
 .navbar {
@@ -29,13 +32,13 @@
 }
 
 a {
-    border: 1px solid rgba(0,0,0,1);
+    border: 1px solid #000000;
     border-radius: 3px;
     padding: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    color: rgba(0,0,0,1);
-    background-color: rgba(255,0,0,1);
+    color: #000000;
+    background-color: rgba(255,0,0,0.8);
     box-shadow: 1px 5px rgba(0,0,0,0.5);
 }
 
@@ -44,20 +47,20 @@ a:visited {
 }
 
 a:hover {
-    box-shadow: 5px 10px rgba(0,0,0,1);
+    background-color: #ff0000;
+    box-shadow: 5px 10px #000000;
     font-weight: bold;
 }
 
-.footer {
-    margin: 30% auto;
+footer {
+    position: absolute;
+    padding: 15px;
+    bottom: -8px;
 }
-/*-------------------------------------Table page --------------------------------------------*/
+
 .table-body {
-    width: 100vw;
-    height: 100vh;
     background-image: url("../img/table-bg.jpg");
-    background-repeat: no-repeat;
-    object-fit: fill;
+    background-size: auto;
 }
 
 .table-title {
@@ -65,9 +68,10 @@ a:hover {
     text-align: center;
     margin: 50px auto;
     font-size: 2rem;
-    color: rgba(255,255,255,1);
-    border-bottom: 1px solid rgba(255,255,255,1);
-    border-top: 1px solid rgba(255,255,255,1);
+    color: #ffffff;
+    text-shadow: 2px 5px #ff0000;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
 }
 
 .container-box {
@@ -76,20 +80,82 @@ a:hover {
 }
 
 img {
-    border: 5px solid rgba(0,0,0,1);
+    border: 5px solid #000000;
     display: block;
     width: 80%;
     margin: 5px auto;
+    position: relative;
 }
+
 .sub-box {
     border-radius: 4px;
-    border: 1px solid rgba(0,0,0,1);
-    padding: 5px;
+    border: 5px solid #000000;
+    padding: 8px;
     background-color: rgba(255,255,255,0.3);
     margin: 10px;
 }
 
 .sub-box:hover {
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 5px 10px rgba(0, 0, 0, 1);
+    box-shadow: 5px 10px #000000;
+}
+
+.form-body {
+    background-image: url("../img/form-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+textarea {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.form-title {
+    width: 40%;
+    text-align: center;
+    margin: 180px 30px 0 auto;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 5px #ff0000;
+    border-bottom: 1px solid #ffffff;
+}
+
+.form-nav {
+    margin-right: 8rem;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border: 4px solid #000000;
+    background: radial-gradient(circle, rgba(240,240,240,0.7) 0%, rgba(255,0,0,0.7) 100%, rgba(0,0,0,0.7) 100%);
+    width: 28%;
+    position: absolute;
+    left: 20px ;
+    top: 90px;
+    border-radius: 4px;
+}
+
+.form-box div {
+    margin: 20px;
+}
+
+button {
+    width: 20%;
+    margin: 10px auto;
+}
+
+.message {
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 2px 2px #000000;
+    margin: 0 auto ;
+    color: #000000;
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid #000000;
+    border-radius: 4px;
 }
