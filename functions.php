@@ -43,10 +43,10 @@ function executeFormCheckAndDataInsert(array $get): string
     if (empty($get)) {
         $message = '' ;
     } else {
-        $title = $_GET['title'];
-        $artist_name = $_GET['artist_name'];
-        $type = $_GET['type'];
-        $description = $_GET['description'];
+        $title = $get['title'];
+        $artist_name = $get['artist_name'];
+        $type = $get['type'];
+        $description = $get['description'];
         $message .= isFormCorrect($title, $artist_name, $type, $description);
         if ($message === '') {
             $db = dbConnect();

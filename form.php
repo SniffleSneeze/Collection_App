@@ -25,7 +25,6 @@ $message = executeFormCheckAndDataInsert($_GET)
                 <a href="gallery.php">Explore Your Gallery</a>
             </div>
         </nav>
-        <?php echo $message ?>
         <div>
             <form class="form-box">
                 <div>
@@ -52,6 +51,7 @@ $message = executeFormCheckAndDataInsert($_GET)
                     <label for="description">Description for the painting: </label>
                     <textarea id="description" rows="20" cols="66" name="description"></textarea>
                 </div>
+                <?php echo $message ?>
                 <button class="button">Add Painting</button>
             </form>
         </div>
