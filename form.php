@@ -4,7 +4,7 @@ $message = executeFormCheckAndDataInsert($_GET)
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> 
         <title>Painting Collection</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +49,7 @@ $message = executeFormCheckAndDataInsert($_GET)
                 </div>
                 <div>
                     <label for="description">Description for the painting: </label>
-                    <textarea id="description" rows="20" cols="66" name="description"></textarea>
+                    <textarea id="description" rows="20" cols="58" name="description"></textarea>
                 </div>
                 <?php echo $message ?>
                 <button class="button">Add Painting</button>
