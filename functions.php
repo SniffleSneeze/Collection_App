@@ -37,19 +37,42 @@ function extractDataAndDisplay(array $data):string
     return $text;
 }
 
+function executeFormCheckAndDataInsert(array $get): string
+{
+    $message = '';
+    if (empty($_GET)) {
+        $message = '' ;
+    } else {
+        $title = $_GET['title'];
+        $artist_name = $_GET['artist_name'];
+        $type = $_GET['type'];
+        $description = $_GET['description'];
+        $message .= isFormCorrect($title, $artist_name, $type, $description);
+        if ($message === '') {
+            $db = dbConnect();
+            $message .= isInDataBase($db,$title);
+            if ($message === '') {
+                $db = dbConnect();
+                $message .= insertDataIntoDataBase($db, $title, $artist_name, $type, $description);
+            }
+        }
+    }
+    return $message;
+}
+
 function isFormCorrect(string $title, string $artist_name, string $type, string $description): string
 {
     if (empty($title) || empty($type) || empty($description) || ($artist_name == '0')) {
 
-        return '<div class="message">' . 'Please make sure to fill all the field in the form. Thanks you' . '</div>';
+        return '<div class="message">Please make sure to fill all the field in the form. Thanks you</div>';
     } else {
-        return "";
+        return '';
     }
 }
 
 function isInDataBase(PDO $db, string $title): string
 {
-    $query = $db->prepare('SELECT `painting_title` FROM `painting` WHERE `painting_title`= :title ');
+    $query = $db->prepare('SELECT `painting_title` FROM `painting` WHERE `painting_title` = :title ');
     $query->execute(
         [
         ':title' => $title,
@@ -61,7 +84,7 @@ function isInDataBase(PDO $db, string $title): string
         return '<div class="message">' .
             'You already Own that paint in your gallery, be nice and give this copy to a commoner' . '</div>';
     } else {
-        return "";
+        return '';
     }
 }
 
@@ -77,5 +100,5 @@ function insertDataIntoDataBase(PDO $db, string $title, string $artist_name, str
             ':image' => $image,
         ]
     );
-    return '<div class="message">' . 'The new painting has been move into the gallery' . '</div>';;
+    return '<div class="message">The new painting has been move into the gallery</div>';;
 }

@@ -18,7 +18,8 @@ class functions extends TestCase
         ];
         $expected_success = '<section class="container-box"><div class="sub-box"><img src="img/string" alt="string">'
                             . '<h2 class="title">string</h2>'
-                            . '<h4 class="artist">Artist: string</h4><h5 class="type">Type: string</h5>'
+                            . '<h4 class="artist">Artist: string</h4>'
+                            . '<h5 class="type">Type: string</h5>'
                             . '<p class="descripton">Description: </p><p>string</p></div></section>';
 
         $result_success = extractDataAndDisplay($input_success);

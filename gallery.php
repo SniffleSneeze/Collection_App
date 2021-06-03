@@ -19,7 +19,7 @@ $data = getData($db);
         <div class="table-title">
             <h1>Welcome In The Gallery</h1>
         </div>
-        <nav class="navbar container">
+        <nav class="navbar">
             <div>
                 <a href="index.php" class="">Back To Front Door</a>
             </div>
@@ -28,10 +28,10 @@ $data = getData($db);
             </div>
         </nav>
         <?php echo extractDataAndDisplay($data);?>
-        <footer class="footer">
+        <footer>
             <div>
                 <p>
-                    &copy - Alexander Ferreira 2021
+                    &copy - Alexander Ferreira - project 2 - from Io Academy - 2021
                 </p>
             </div>
         </footer>

@@ -21,10 +21,10 @@
                 <a href="form.php" class="">Add To You Collection</a>
             </div>
         </nav>
-    <footer class="footer">
+    <footer>
         <div>
             <p>
-                &copy - Alexander Ferreira 2021
+                &copy - Alexander Ferreira - project 2 - from Io Academy - 2021
             </p>
         </div>
     </footer>

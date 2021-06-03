@@ -1,24 +1,6 @@
 <?php
-require_once "functions.php";
-
-$message = '';
-if (empty($_GET)) {
-    $message = '' ;
-} else {
-    $title = $_GET['title'];
-    $artist_name = $_GET['artist_name'];
-    $type = $_GET['type'];
-    $description = $_GET['description'];
-    $message .= isFormCorrect($title, $artist_name, $type, $description);
-    if ($message === '') {
-        $db = dbConnect();
-        $message .= isInDataBase($db,$title);
-        if ($message === '') {
-            $db = dbConnect();
-            $message .= insertDataIntoDataBase($db, $title, $artist_name, $type, $description);
-        }
-    }
-}
+require "functions.php";
+$message = executeFormCheckAndDataInsert($_GET)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,10 +19,10 @@ if (empty($_GET)) {
         </div>
         <nav class="navbar form-nav">
             <div>
-                <a href="index.php" class="">Back To Front Door</a>
+                <a href="index.php">Back To Front Door</a>
             </div>
             <div>
-                <a href="gallery.php" class="">Explore Your Gallery</a>
+                <a href="gallery.php">Explore Your Gallery</a>
             </div>
         </nav>
         <?php echo $message ?>
@@ -69,16 +51,15 @@ if (empty($_GET)) {
                 <div>
                     <label for="description">Description for the painting: </label>
                     <br>
-                    <br>
                     <textarea id="description" rows="20" cols="66" name="description"></textarea>
                 </div>
                 <button class="button">Add Painting</button>
             </form>
         </div>
-        <footer class="footer">
+        <footer>
             <div>
                 <p>
-                    &copy - Alexander Ferreira 2021
+                    &copy - Alexander Ferreira - project 2 - from Io Academy - 2021
                 </p>
             </div>
         </footer>
