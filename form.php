@@ -1,19 +1,24 @@
 <?php
 require_once "functions.php";
 
-$message = '<div class="message">';
+$message = '';
 if (empty($_GET)) {
-    $message ='' ;
-} elseif (isset($_GET['title'])) {
+    $message = '' ;
+} else {
     $title = $_GET['title'];
     $artist_name = $_GET['artist_name'];
     $type = $_GET['type'];
     $description = $_GET['description'];
-    $db = dbConnect();
-    $message .= insertDataIntoDataBase($db,$title,$artist_name,$type,$description);
+    $message .= isFormCorrect($title, $artist_name, $type, $description);
+    if ($message === '') {
+        $db = dbConnect();
+        $message .= isInDataBase($db,$title);
+        if ($message === '') {
+            $db = dbConnect();
+            $message .= insertDataIntoDataBase($db, $title, $artist_name, $type, $description);
+        }
+    }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +53,7 @@ if (empty($_GET)) {
                 <div>
                     <label for="artist_name">Artist name: </label>
                     <select name="artist_name">
-                        <option value="" >-Select Artist-</option>
+                        <option value="0" >-Select Artist-</option>
                         <option value="1" >Salvador Dali</option>
                         <option value="2" >Gustav Klimt</option>
                         <option value="3" >James Abbott McNeill Whistler</option>

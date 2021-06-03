@@ -38,7 +38,17 @@ function extractDataAndDisplay(array $data):string
     return $text;
 }
 
-function isInDataBase(PDO $db, string $title): bool
+function isFormCorrect(string $title, string $artist_name, string $type, string $description): string
+{
+    if (empty($title) || empty($type) || empty($title) || empty($description) || ($artist_name == 0)) {
+
+        return '<div class="message">' . 'Please make sure to fill all the field of in the form. Thanks you' . '</div>';
+    } else {
+        return "";
+    }
+}
+
+function isInDataBase(PDO $db, string $title): string
 {
     $query = $db->prepare('SELECT `painting_title` FROM `painting` WHERE `painting_title`= :title ');
     $query->execute(
@@ -46,12 +56,17 @@ function isInDataBase(PDO $db, string $title): bool
         ':title' => $title,
         ]
     );
-    $result = $query->fetchAll();
+    $result = $query->fetch();
 
-    return empty($result);
+    if ($result == true) {
+        return '<div class="message">' .
+            'You already Own that paint in your gallery, be nice and give this copy to a commoner' . '</div>';
+    } else {
+        return "";
+    }
 }
 
-function insertDataIntoDataBase(PDO $db, string $title, int $artist_name, string $type, string $description, string $image = "no-image.png"): string
+function insertDataIntoDataBase(PDO $db, string $title, string $artist_name, string $type, string $description, string $image = "no-image.png"): string
 {
     $query = $db->prepare('INSERT INTO `painting` (`painting_title`, `artist_name` ,`type`, `description`, `image` ) VALUES (:title, :artist_name, :type, :description, :image);');
     $query->execute(
@@ -64,6 +79,6 @@ function insertDataIntoDataBase(PDO $db, string $title, int $artist_name, string
         ]
     );
 
-    return 'The new painting has been move into the gallery' . '</div>';;
+    return '<div class="message">' . 'The new painting has been move into the gallery' . '</div>';;
 }
 

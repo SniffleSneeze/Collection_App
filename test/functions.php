@@ -40,4 +40,26 @@ class functions extends TestCase
         extractDataAndDisplay($input_malform);
 
     }
+
+    public function testisFormCorrectSuccess()
+    {
+        $input_success = [
+            [
+                'painting_title' => 'string',
+                'name' => 'string',
+                'type' => 'string',
+                'description' => 'string',
+            ]
+        ];
+    }
+
+    public function testisFormCorrectFail()
+    {
+
+    }
+
+    public function testisFormCorrectMalformed()
+    {
+
+    }
 }
