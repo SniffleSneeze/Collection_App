@@ -124,7 +124,6 @@ textarea {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    text-align: justify;
     border: 4px solid #000000;
     background: radial-gradient(circle, rgba(240,240,240,0.7) 0%, rgba(255,0,0,0.7) 100%, rgba(0,0,0,0.7) 100%);
     width: 28%;

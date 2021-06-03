@@ -21,10 +21,10 @@ $data = getData($db);
         </div>
         <nav class="navbar">
             <div>
-                <a href="index.php" class="">Back To Front Door</a>
+                <a href="index.php">Back To Front Door</a>
             </div>
             <div>
-                <a href="form.php" class="">Add To You Collection</a>
+                <a href="form.php">Add To You Collection</a>
             </div>
         </nav>
         <?php echo extractDataAndDisplay($data);?>

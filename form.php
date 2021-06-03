@@ -50,7 +50,6 @@ $message = executeFormCheckAndDataInsert($_GET)
                 </div>
                 <div>
                     <label for="description">Description for the painting: </label>
-                    <br>
                     <textarea id="description" rows="20" cols="66" name="description"></textarea>
                 </div>
                 <button class="button">Add Painting</button>
