@@ -24,7 +24,7 @@
     <footer>
         <div>
             <p>
-                &copy - Alexander Ferreira - project 2 - from Io Academy - 2021
+                &copy - Alexander Ferreira - project 2 - from I0 Academy - 2021
             </p>
         </div>
     </footer>

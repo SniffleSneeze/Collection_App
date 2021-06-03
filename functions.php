@@ -40,7 +40,7 @@ function extractDataAndDisplay(array $data):string
 function executeFormCheckAndDataInsert(array $get): string
 {
     $message = '';
-    if (empty($_GET)) {
+    if (empty($get)) {
         $message = '' ;
     } else {
         $title = $_GET['title'];
@@ -52,7 +52,6 @@ function executeFormCheckAndDataInsert(array $get): string
             $db = dbConnect();
             $message .= isInDataBase($db,$title);
             if ($message === '') {
-                $db = dbConnect();
                 $message .= insertDataIntoDataBase($db, $title, $artist_name, $type, $description);
             }
         }
@@ -100,5 +99,5 @@ function insertDataIntoDataBase(PDO $db, string $title, string $artist_name, str
             ':image' => $image,
         ]
     );
-    return '<div class="message">The new painting has been move into the gallery</div>';;
+    return '<div class="message">The new painting has been move into the gallery</div>';
 }
