@@ -1,11 +1,19 @@
 <?php
-require "functions.php";
+require_once "functions.php";
 
-if (isset($_GET)) {
+$message = '<div class="message">';
+if (empty($_GET)) {
+    $message ='' ;
+} elseif (isset($_GET['title'])) {
+    $title = $_GET['title'];
+    $artist_name = $_GET['artist_name'];
+    $type = $_GET['type'];
+    $description = $_GET['description'];
     $db = dbConnect();
-    insertDataIntoDataBase();
-
+    $message .= insertDataIntoDataBase($db,$title,$artist_name,$type,$description);
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +30,15 @@ if (isset($_GET)) {
         <div class="form-title">
             <h1>Add Painting To The Collection</h1>
         </div>
-
+        <nav class="navbar form-nav">
+            <div>
+                <a href="index.php" class="">Back To Front Door</a>
+            </div>
+            <div>
+                <a href="gallery.php" class="">Explore Your Gallery</a>
+            </div>
+        </nav>
+        <?php echo $message ?>
         <div>
             <form class="form-box">
                 <div>
@@ -31,15 +47,15 @@ if (isset($_GET)) {
                 </div>
                 <div>
                     <label for="artist_name">Artist name: </label>
-                    <select>
-                        <option value="1" name="artist_name">Salvador Dali</option>
-                        <option value="2" name="artist_name">Gustav Klimt</option>
-                        <option value="3" name="artist_name">James Abbott McNeill Whistler</option>
-                        <option value="4" name="artist_name">Rene Magritte</option>
-                        <option value="5" name="artist_name">Sandro Botticelli</option>
-                        <option value="6" name="artist_name">Leonardo da Vinci</option>
+                    <select name="artist_name">
+                        <option value="" >-Select Artist-</option>
+                        <option value="1" >Salvador Dali</option>
+                        <option value="2" >Gustav Klimt</option>
+                        <option value="3" >James Abbott McNeill Whistler</option>
+                        <option value="4" >Rene Magritte</option>
+                        <option value="5" >Sandro Botticelli</option>
+                        <option value="6" >Leonardo da Vinci</option>
                     </select>
-
                 </div>
                 <div>
                     <label for="type">Type Of Painting: </label>
@@ -48,13 +64,12 @@ if (isset($_GET)) {
                 <div>
                     <label for="description">Description for the painting: </label>
                     <br>
-                    <textarea id="description" rows="5" cols="50" name="description"></textarea>
+                    <br>
+                    <textarea id="description" rows="20" cols="66" name="description"></textarea>
                 </div>
                 <button class="button">Add Painting</button>
             </form>
         </div>
-
-
         <footer class="footer">
             <div>
                 <p>

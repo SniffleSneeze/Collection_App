@@ -38,10 +38,32 @@ function extractDataAndDisplay(array $data):string
     return $text;
 }
 
-function insertDataIntoDataBase(PDO $db, string $title, string $name, string $type, string $description, string $image = "no image")
+function isInDataBase(PDO $db, string $title): bool
 {
-    $query = $db->prepare('INSERT INTO `painting` (`painting_title`, `artist_name` ,`type`, `description`, `image` ) VALUE ('alex', 7, 'bla', 'blibli', 'image' );';
-    'INSERT INTO `artist` (`name`) VALUE ('ferreira' );');
-    $query->execute();
+    $query = $db->prepare('SELECT `painting_title` FROM `painting` WHERE `painting_title`= :title ');
+    $query->execute(
+        [
+        ':title' => $title,
+        ]
+    );
+    $result = $query->fetchAll();
+
+    return empty($result);
+}
+
+function insertDataIntoDataBase(PDO $db, string $title, int $artist_name, string $type, string $description, string $image = "no-image.png"): string
+{
+    $query = $db->prepare('INSERT INTO `painting` (`painting_title`, `artist_name` ,`type`, `description`, `image` ) VALUES (:title, :artist_name, :type, :description, :image);');
+    $query->execute(
+        [
+            ':title' => $title,
+            ':artist_name' => $artist_name,
+            ':type' => $type,
+            ':description' => $description,
+            ':image' => $image,
+        ]
+    );
+
+    return 'The new painting has been move into the gallery' . '</div>';;
 }
 

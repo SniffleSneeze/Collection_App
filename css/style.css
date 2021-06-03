@@ -1,14 +1,16 @@
 * {
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
-    position: relative;
 }
 
-.index-body {
+html {
     width: 100vw;
     height: 100vh;
+}
+.index-body {
     background-image: url("../img/index-bg.jpg");
     background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .index-title {
@@ -35,7 +37,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     color: rgba(0,0,0,1);
-    background-color: rgba(255,0,0,1);
+    background-color: rgba(255,0,0,0.8);
     box-shadow: 1px 5px rgba(0,0,0,0.5);
 }
 
@@ -44,12 +46,14 @@ a:visited {
 }
 
 a:hover {
+    background-color: rgba(255,0,0,1);
     box-shadow: 5px 10px rgba(0,0,0,1);
     font-weight: bold;
 }
 
 .footer {
-    margin: 30% auto;
+    margin-top: 24%;
+    padding: 15px;
 }
 /*-------------------------------------Table page --------------------------------------------*/
 .table-body {
@@ -57,7 +61,7 @@ a:hover {
     height: 100vh;
     background-image: url("../img/table-bg.jpg");
     background-repeat: no-repeat;
-    object-fit: fill;
+    background-size:cover;
 }
 
 .table-title {
@@ -66,6 +70,7 @@ a:hover {
     margin: 50px auto;
     font-size: 2rem;
     color: rgba(255,255,255,1);
+    text-shadow: 2px 5px rgba(255,0,0,1);
     border-bottom: 1px solid rgba(255,255,255,1);
     border-top: 1px solid rgba(255,255,255,1);
 }
@@ -80,7 +85,9 @@ img {
     display: block;
     width: 80%;
     margin: 5px auto;
+    position: relative;
 }
+
 .sub-box {
     border-radius: 4px;
     border: 1px solid rgba(0,0,0,1);
@@ -94,23 +101,11 @@ img {
     box-shadow: 5px 10px rgba(0, 0, 0, 1);
 }
 
-/*
-.sub-box:active {
-    background-color: rgba(255,255,255,1);
-    box-shadow: 5px 10px rgba(0,0,0,1);
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    z-index: 1;
-}*/
 /*-------------------------------------Form page --------------------------------------------*/
-
 .form-body {
-    width: 100vw;
-    height: 100vh;
     background-image: url("../img/form-bg.jpeg");
     background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .form-title {
@@ -123,17 +118,44 @@ img {
     border-bottom: 1px solid rgba(255,255,255,1);
 }
 
+.form-nav {
+    margin-right: 8rem;
+}
+
 .form-box {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.5);
-    width: 40%;
+    text-align: justify;
+    border: 4px solid rgba(0,0,0,1);
+    background: radial-gradient(circle, rgba(240,240,240,0.7) 0%, rgba(255,0,0,0.7) 100%, rgba(0,0,0,0.7) 100%);
+    width: 28%;
     position: absolute;
-    top: -60px;
+    left: 20px ;
+    top: 90px;
+    border-radius: 4px;
 }
 
 .form-box div {
     margin: 20px;
+}
+
+button {
+    width: 20%;
+    margin: 10px auto;
+}
+
+.message {
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    text-shadow: 1px 3px rgba(0,0,0,0.7);
+    box-shadow: 2px 2px rgba(0,0,0,1);
+    margin:1rem 14rem auto auto ;
+    color: rgba(255,255,255,1);
+    background-color: rgba(255,0,0,0.5);
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: 4px;
 }
 
