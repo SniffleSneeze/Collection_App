@@ -13,7 +13,6 @@ function getData(PDO $db):array
        FROM `painting` JOIN `artist` ON `painting`.`artist_name` = `artist`.`id`;');
     $query->execute();
     $result = $query->fetchAll();
-
     return $result;
 }
 
@@ -78,7 +77,5 @@ function insertDataIntoDataBase(PDO $db, string $title, string $artist_name, str
             ':image' => $image,
         ]
     );
-
     return '<div class="message">' . 'The new painting has been move into the gallery' . '</div>';;
 }
-

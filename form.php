@@ -84,4 +84,3 @@ if (empty($_GET)) {
         </footer>
     </body>
 </html>
-

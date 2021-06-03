@@ -30,7 +30,6 @@ class functions extends TestCase
         $expected_fail = '<section class="container-box"></section>';
         $result_fail = extractDataAndDisplay($input_fail);
         $this->assertEquals($expected_fail, $result_fail);
-
     }
 
     public function testextractDataAndDisplayMalformed()
@@ -38,7 +37,6 @@ class functions extends TestCase
         $input_malform = "";
         $this->expectException(TypeError::class);
         extractDataAndDisplay($input_malform);
-
     }
 
     public function testisFormCorrectSuccess()
@@ -47,7 +45,6 @@ class functions extends TestCase
         $input2 = '1';
         $input3 = 'string';
         $input4 = 'string';
-
         $expected_success = '';
         $result_success = isFormCorrect($input1, $input2, $input3, $input4);
         $this->assertEquals($expected_success, $result_success);
@@ -59,7 +56,6 @@ class functions extends TestCase
         $input2 = '0';
         $input3 = '';
         $input4 = '';
-
         $expected_fail = '<div class="message">' . 'Please make sure to fill all the field in the form. Thanks you' . '</div>';
         $result_fail = isFormCorrect($input1, $input2, $input3, $input4);
         $this->assertEquals($expected_fail, $result_fail);

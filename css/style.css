@@ -7,10 +7,11 @@ html {
     width: 100vw;
     height: 100vh;
 }
+
 .index-body {
     background-image: url("../img/index-bg.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
 .index-title {
@@ -56,12 +57,11 @@ a:hover {
     padding: 15px;
     bottom: -8px;
 }
-/*-------------------------------------Table page --------------------------------------------*/
+
 .table-body {
     width: 100vw;
     height: 100vh;
     background-image: url("../img/table-bg.jpg");
-    background-repeat: stretch;
     background-size: cover;
 }
 
@@ -102,11 +102,10 @@ img {
     box-shadow: 5px 10px rgba(0, 0, 0, 1);
 }
 
-/*-------------------------------------Form page --------------------------------------------*/
 .form-body {
     background-image: url("../img/form-bg.jpeg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
 }
 
 .form-title {
@@ -153,7 +152,7 @@ button {
     padding: 5px;
     text-shadow: 1px 3px rgba(0,0,0,0.7);
     box-shadow: 2px 2px rgba(0,0,0,1);
-    margin:1rem 14rem auto auto ;
+    margin: 1rem 14rem auto auto ;
     color: rgba(255,255,255,1);
     background-color: rgba(255,0,0,0.5);
     border: 1px solid rgba(0,0,0,1);
