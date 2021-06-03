@@ -40,9 +40,9 @@ function extractDataAndDisplay(array $data):string
 
 function isFormCorrect(string $title, string $artist_name, string $type, string $description): string
 {
-    if (empty($title) || empty($type) || empty($title) || empty($description) || ($artist_name == 0)) {
+    if (empty($title) || empty($type) || empty($description) || ($artist_name == '0')) {
 
-        return '<div class="message">' . 'Please make sure to fill all the field of in the form. Thanks you' . '</div>';
+        return '<div class="message">' . 'Please make sure to fill all the field in the form. Thanks you' . '</div>';
     } else {
         return "";
     }

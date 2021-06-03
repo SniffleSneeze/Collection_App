@@ -43,23 +43,32 @@ class functions extends TestCase
 
     public function testisFormCorrectSuccess()
     {
-        $input_success = [
-            [
-                'painting_title' => 'string',
-                'name' => 'string',
-                'type' => 'string',
-                'description' => 'string',
-            ]
-        ];
+        $input1 = 'string';
+        $input2 = '1';
+        $input3 = 'string';
+        $input4 = 'string';
+
+        $expected_success = '';
+        $result_success = isFormCorrect($input1, $input2, $input3, $input4);
+        $this->assertEquals($expected_success, $result_success);
     }
 
     public function testisFormCorrectFail()
     {
+        $input1 = '';
+        $input2 = '0';
+        $input3 = '';
+        $input4 = '';
 
+        $expected_fail = '<div class="message">' . 'Please make sure to fill all the field in the form. Thanks you' . '</div>';
+        $result_fail = isFormCorrect($input1, $input2, $input3, $input4);
+        $this->assertEquals($expected_fail, $result_fail);
     }
 
     public function testisFormCorrectMalformed()
     {
-
+        $input_malformed = 1;
+        $this->expectException(TypeError::class);
+        extractDataAndDisplay($input_malformed);
     }
 }
